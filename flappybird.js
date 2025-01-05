@@ -215,7 +215,7 @@ function jump() {
   if (bgm.paused) {
     bgm.play();
   }
-  bgm.play();
+//   bgm.play(); disabled as might be causing lag on mobile. 
   wingSound.play();
   velocityY = -6;
   if (gameOver) {
