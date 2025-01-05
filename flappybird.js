@@ -39,8 +39,10 @@ let gameOver = false;
 let score = 0;
 //sounds
 let wingSound = new Audio('./sfx_wing.wav');
+wingSound.preload = 'auto';
 let hitSound = new Audio('./sfx_hit.wav');
 let bgm = new Audio('./bgm_mario.mp3');
+bgm.preload = 'auto';
 bgm.loop = true;
 let point = new Audio('./sfx_point.wav');
 let fall = new Audio('./sfx_die.wav');
