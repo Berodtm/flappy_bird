@@ -89,6 +89,7 @@ window.onload = function () {
 
   // 3) Touch taps
   document.addEventListener('touchstart', (e) => {
+    e.preventDefault();
     moveBird(e);
   });
 };
