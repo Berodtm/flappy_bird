@@ -84,16 +84,16 @@ window.onload = function () {
     moveBird(e);
   });
 
-  // 2) Mouse clicks
-  board.addEventListener('click', (e) => {
+  // 2) Mouse clicks and mobile taps - used poitnerdown as more mordern
+  board.addEventListener('pointerdown', (e) => {
     moveBird(e);
   });
 
-  // 3) Touch taps
-  board.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    moveBird(e);
-  });
+  //   // 3) Touch taps
+  //   board.addEventListener('touchstart', (e) => {
+  //     e.preventDefault();
+  //     moveBird(e);
+  //   });
 };
 
 function update() {
@@ -207,7 +207,7 @@ function moveBird(e) {
   // Mouse or touch triggers
   // (They don't have e.code, so we just call jump()
   // to do the same action)
-  if (e.type === 'click' || e.type === 'touchstart') {
+  if (e.type === 'pointerdown') {
     jump();
   }
 }
@@ -217,7 +217,7 @@ function jump() {
   if (bgm.paused) {
     bgm.play();
   }
-//   bgm.play(); disabled as might be causing lag on mobile. 
+  //   bgm.play(); disabled as might be causing lag on mobile.
   wingSound.play();
   velocityY = -6;
   if (gameOver) {
