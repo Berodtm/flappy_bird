@@ -6,4 +6,6 @@ body {
 #board {
     /* background-color: skyblue; */
     background-image: url("./flappybirdbg.png");
+    touch-action: none;
+    -webkit-user-select: none;
 }
