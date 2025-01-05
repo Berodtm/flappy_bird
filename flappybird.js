@@ -85,12 +85,12 @@ window.onload = function () {
   });
 
   // 2) Mouse clicks
-  document.addEventListener('click', (e) => {
+  board.addEventListener('click', (e) => {
     moveBird(e);
   });
 
   // 3) Touch taps
-  document.addEventListener('touchstart', (e) => {
+  board.addEventListener('touchstart', (e) => {
     e.preventDefault();
     moveBird(e);
   });
